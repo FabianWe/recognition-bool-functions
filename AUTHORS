@@ -1,0 +1,14 @@
+The combinatorial DNF to LPB conversion algorithm was developed by
+
+Jan-Georg Smaus
+
+and implemented by
+
+Fabian Wenzelmann <fabianwenzelmann#gmail.com> (replace the '#' with an @)
+
+special thanks to
+
+Christian Schilling.
+
+The project's site is https://github.com/FabianWe/recognition-bool-functions
+where you can also find the source code.

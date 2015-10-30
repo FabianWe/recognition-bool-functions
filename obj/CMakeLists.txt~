@@ -1,0 +1,45 @@
+##
+# CMakeLists.txt
+#
+# Copyright 2012 Fabian Wenzelmann
+#
+# This file is part of Recognition-Procedures-for-Boolean-Functions.
+#
+# Recognition-Procedures-for-Boolean-Functions is free software: you
+# can redistribute it and/or modify it under the terms of the
+# GNU General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# Recognition-Procedures-for-Boolean-Functions is distributed in the hope
+# that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+# Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Recognition-Procedures-for-Boolean-Functions.
+#
+# If not, see <http://www.gnu.org/licenses/>.
+##
+
+add_library(bfr
+    ${BFR_SOURCE_DIR}/src/AuxiliaryNode.cpp
+    ${BFR_SOURCE_DIR}/src/BooleanVector.cpp
+    ${BFR_SOURCE_DIR}/src/Clause.cpp
+    ${BFR_SOURCE_DIR}/src/ClauseSet.cpp
+    ${BFR_SOURCE_DIR}/src/DIMACSCollectionParser.cpp
+    ${BFR_SOURCE_DIR}/src/DIMACSParser.cpp
+    ${BFR_SOURCE_DIR}/src/DNFTree.cpp
+    ${BFR_SOURCE_DIR}/src/Literal.cpp
+    ${BFR_SOURCE_DIR}/src/LPB.cpp
+    ${BFR_SOURCE_DIR}/src/LPBConversionException.cpp
+    ${BFR_SOURCE_DIR}/src/LPSolver.cpp
+    ${BFR_SOURCE_DIR}/src/MainNode.cpp
+    ${BFR_SOURCE_DIR}/src/NotSymmetricException.cpp
+    ${BFR_SOURCE_DIR}/src/OccurrencePattern.cpp
+    ${BFR_SOURCE_DIR}/src/SplitResult.cpp
+    ${BFR_SOURCE_DIR}/src/SplittingTree.cpp
+    ${BFR_SOURCE_DIR}/src/TreeContext.cpp
+    ${BFR_SOURCE_DIR}/src/VariableSetting.cpp
+    ${BFR_SOURCE_DIR}/src/WinderMatrix.cpp
+    ${BFR_SOURCE_DIR}/src/CoefficientSelectionException.cpp
+)
