@@ -62,16 +62,8 @@ class LPB(object):
         if not n and self.d > 0:
             # never true
             return []
-        if self.d < 0:
+        if self.d <= 0:
             # always false because coefficients must be >= 0
-            return [[]]
-        # check if it's true, that's the case if every coefficient is >= d
-        all_true = True
-        for c in self.coefficients:
-            if c < self.d:
-                all_true = False
-                break
-        if all_true:
             return [[]]
         dnf = []
         clause_sets = []
