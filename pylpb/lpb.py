@@ -22,7 +22,9 @@
 # If not, see <http://www.gnu.org/licenses/>.
 #
 
+
 class LPB(object):
+
     """
     Class representing an LPB a1 * l1 + ... + an * ln >= d.
 
@@ -32,6 +34,7 @@ class LPB(object):
         d (number): The threshold of the LPB
         coefficients (list or tuple of number): The coefficients of the LPB
     """
+
     def __init__(self, d, *args, _type=None):
         """
         Creates a new LPB given the threshold and the coefficients
@@ -48,13 +51,11 @@ class LPB(object):
         self.d = d
         self.coefficients = _type(args)
 
-
     def __repr__(self):
         l = ['%d * x%d' % (a, i) for (i, a) in enumerate(self.coefficients)]
         s = ' + '.join(l)
         s += ' >= %d' % self.d
         return s
-
 
     def toDNF(self):
         # TODO doc and test me... why do I even work?
@@ -84,15 +85,11 @@ class LPB(object):
                         clause_sets[j].append(newT)
         return dnf
 
-
-
     def __eq__(self, other):
         return self.d == other.d and self.coefficients == other.coefficients
 
-
     def __ne__(self, other):
         return not self == other
-
 
     def __len__(self):
         return len(self.coefficients)
