@@ -86,6 +86,8 @@ class LPB(object):
         return dnf
 
     def __eq__(self, other):
+        if not isinstance(other, LPB):
+            return False
         return self.d == other.d and self.coefficients == other.coefficients
 
     def __ne__(self, other):
@@ -128,3 +130,11 @@ def parse_lpb(s, _type=None, number_type=None):
 
 def dnf_to_set(dnf):
     return set(frozenset(clause) for clause in dnf)
+
+
+def variable_count(dnf):
+    count = 0
+    for clause in dnf:
+        for x in clause:
+            count = max(count, x + 1)
+    return count
