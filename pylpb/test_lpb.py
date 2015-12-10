@@ -22,7 +22,7 @@
 # If not, see <http://www.gnu.org/licenses/>.
 #
 
-from lpb import *
+from .lpb import *
 
 
 def test_eq_one():
