@@ -26,7 +26,8 @@ from .lpb_comb import *
 
 
 def test_op_cmp():
-    # all occurrence patterns tests are taken from from Smaus' first publication
+    # all occurrence patterns tests are taken from from Smaus'
+    # first publication
     # http://www.informatik.uni-freiburg.de/~ki/papers/smaus-tr230.pdf
     o1 = OccurrencePattern(0, [2, 2, 2, 2])
     o2 = OccurrencePattern(1, [2, 2, 2])

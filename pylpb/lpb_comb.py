@@ -25,8 +25,8 @@
 from lpb import *
 
 """
-This module provides a method for the combinatorial by Jan-Georg Smaus, which
-is now proven to be incomplete.
+This module provides a method for the combinatorial by Jan-Georg Smaus,
+which is now proven to be incomplete.
 """
 
 
@@ -198,14 +198,16 @@ class SplittingTreeNode(object):
             variables to split away (i. e. the occurrence patterns in this
             nodes are not empty).
 
-            If there is no variable to split away the behavior is not specified.
+            If there is no variable to split away the behavior is not
+            specified.
 
             A call of this method sets the value of alreadySplit to True.
         isFinal(): This method should return True if this node is a final node
             and False otherwise
     """
+
     def __init__(self, dnf, occurrencePatterns, context,
-        lowerParent=None, upperParent=None):
+                 lowerParent=None, upperParent=None):
         self.lowerChild = None
         self.upperChild = None
         self.lowerParent = lowerParent
@@ -228,6 +230,7 @@ class SplittingTreeNode(object):
 
 
 class MainNode(SplittingTreeNode):
+
     """
     Subclass for the main nodes as defined by Smaus.
 
@@ -237,6 +240,7 @@ class MainNode(SplittingTreeNode):
         isFinal (bool): Value is set to True if this is a final main node (i.e.
             True if its DNF is true or false).
     """
+
     def __init__(self, dnf, occurrencePatterns, context):
         super(MainNode, self).__init__(dnf, occurrencePatterns, context)
         self.isFinal = self._calcIsFinal()
@@ -249,7 +253,7 @@ class MainNode(SplittingTreeNode):
         if not len(self.dnf):
             return True
         elif len(self.dnf) == 1:
-            for clause in self.dnf:
-                if not len(clause):
-                    return True
+            clause = dnf[0]
+            if not len(clause):
+                return True
         return False
