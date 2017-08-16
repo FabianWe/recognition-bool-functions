@@ -1,2 +1,2 @@
-# recognition-bool-functions
-Provides procedures for recognizing certain classes of Boolean functions
+# IMPORTANG
+This package is outdated, a new implementation in Go will be provided soon.
